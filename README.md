@@ -11,7 +11,7 @@ php artisan test                      # ou : vendor/bin/phpunit
 php artisan test --filter=TicketsTest # les 7 tickets seulement
 ```
 
-Laravel ne sert que de support pour PHPUnit : le module `app/RendezVous/` n'utilise ni Eloquent ni aucune classe du framework. Les tests (10 pour l'étude de cas, plus 2 exemples fournis par Laravel) ne touchent pas la base.
+Laravel ne sert que de support pour PHPUnit : le module `app/RendezVous/` n'utilise ni Eloquent ni aucune classe du framework. Les tests (24 pour l'étude de cas, plus 2 exemples fournis par Laravel) ne touchent pas la base.
 
 ## Contenu du dépôt
 
@@ -24,7 +24,8 @@ app/RendezVous/
 └── RegleException.php      code HTTP + message exact prévu par le sujet
 tests/Unit/RendezVous/
 ├── TicketsTest.php         un test par ticket (TMA-101 à TMA-107)
-└── BonusTest.php           anomalies repérées dans l'export (sans ticket)
+├── BonusTest.php           anomalies repérées dans l'export (sans ticket)
+└── CasLimitesTest.php      cas limites : grille, formats, annulation, pagination
 database/base_rendez_vous.sql   export fourni
 requetes.sql                    requêtes d'impact
 ```
